@@ -1,0 +1,16 @@
+{
+    "name": "dhruvam-rage-bot-application",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "browserify-fs": "^1.0.0",
+        "discord.js": "^13.12.0"
+    }
+}

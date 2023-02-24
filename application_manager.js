@@ -82,15 +82,15 @@ module.exports = async (client, settings) => {
                             settings.acceptChannel
                         );
 
-                        if (user) {
-                            await interaction.reply({
-                                content: `The Message has been sent`,
-                                ephemeral: true,
-                            });
-                        }
+                        //if (user) {
+                            //await interaction.reply({
+                                //content: `The Message has been sent`,
+                                //ephemeral: true,
+                            //});
+                        //}
 
                         const acceptEmbed = new MessageEmbed()
-                            .setColor("YELLOW")
+                            .setColor("GREEN")
                             .setAuthor({ name: 'DHRUVAM', iconURL: 'https://media.discordapp.net/attachments/721682179767271475/1067366483493126154/1.png' })
                             .setThumbnail(`${user.user.avatarURL()}`)
                             .addFields([

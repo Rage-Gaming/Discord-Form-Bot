@@ -10,5 +10,5 @@ After getting to the admin, admins can react from their for example they can acc
 
 Some previews:
 
-https://media.discordapp.net/attachments/831181134913863731/1093416570950270976/Screenshot_20230406-113644_Discord.png
+<img src = "images/Screenshot_20230406-113644_Discord.png">
 

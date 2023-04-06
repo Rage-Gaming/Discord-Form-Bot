@@ -12,5 +12,7 @@ Some previews:
 
 <img src = "images/Screenshot_20230406-113644_Discord.png">
 
-<img src = "images/Screenshot_20230406-113719_Discord.png"
+<img src = "images/Screenshot_20230406-113719_Discord.png">
+
+<img src = "images/Screenshot_20230406-113845_Discord.png>
 

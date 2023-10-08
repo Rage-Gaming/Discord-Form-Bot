@@ -16,3 +16,20 @@ Some previews:
 
 <img src = "images/Screenshot_20230406-113845_Discord.png">
 
+
+
+To start the app use:
+    node start.js
+
+To view the list of running processes:
+    pm2 list
+
+To restart your application:
+    pm2 restart my-app
+
+To stop your application:
+    pm2 stop my-app
+
+To monitor logs:
+    pm2 logs my-app
+

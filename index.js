@@ -39,9 +39,6 @@ client.on("ready", async () => {
   })();
 
   require("./whitelist")(client);
-  require("./ai")(client);
-  require("./namechange")(client);
-  require("./ticket")(client);
   setInterval(() => {
     uploadDBToTelegram();
   }, 5 * 60 * 1000); // 5 minutes

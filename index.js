@@ -2,6 +2,7 @@ require("dotenv").config();
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v10");
 const { Client, GatewayIntentBits } = require("discord.js");
+const { updatePlayerCount } = require("./status");
 const commands = require("./commands");
 require('colors');
 
@@ -37,9 +38,6 @@ client.on("ready", async () => {
   })();
 
   require("./whitelist")(client);
-  setInterval(() => {
-    uploadDBToTelegram();
-  }, 5 * 60 * 1000); // 5 minutes
 });
 
 client.login(process.env.TOKEN);

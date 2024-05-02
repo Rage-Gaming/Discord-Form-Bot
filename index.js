@@ -2,9 +2,7 @@ require("dotenv").config();
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v10");
 const { Client, GatewayIntentBits } = require("discord.js");
-const { updatePlayerCount } = require("./status");
 const commands = require("./commands");
-const { uploadDBToTelegram } = require("./dbBackup");
 require('colors');
 
 const client = new Client({

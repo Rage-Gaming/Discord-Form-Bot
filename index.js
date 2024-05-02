@@ -1,7 +1,11 @@
-require('dotenv').config();
-const { Client, GatewayIntentBits, SlashCommandBuilder } = require('discord.js');
-const {updatePlayerCount} = require("./status")
-
+require("dotenv").config();
+const { REST } = require("@discordjs/rest");
+const { Routes } = require("discord-api-types/v10");
+const { Client, GatewayIntentBits } = require("discord.js");
+const { updatePlayerCount } = require("./status");
+const commands = require("./commands");
+const { uploadDBToTelegram } = require("./dbBackup");
+require('colors');
 
 const client = new Client({
   intents: [
@@ -13,28 +17,34 @@ const client = new Client({
   ],
 });
 
-
 client.on("ready", async () => {
-  console.log(`Bot ${client.user.tag} is now online`);
-  updatePlayerCount(client, process.env.SecondsToUpdateStatus)
-  const commands = new SlashCommandBuilder()
-    .setName("rage")
-    .setDescription("this is a test command")
+  console.clear();
+  console.log(`Bot ${client.user.tag} is now online`.green);
+  updatePlayerCount(client, process.env.SecondsToUpdateStatus);
+  const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
-    .setName("setup")
-    .setDescription("This command will send a message to the dedicated channel")
-
-    .setName('acceptwl')
-    .addSubcommand(subcommand =>
-      subcommand
-        .setName('user')
-        .setDescription('This will give whitelist role to mentioned user and automatically send whitelist message to channel')
-        .addUserOption(option => option.setName('user').setDescription('Mention the user to give the whitelist').setRequired(true)))
-
-  client.application.commands.create(commands)
+  (async () => {
+    try {
+      await rest.put(
+        Routes.applicationGuildCommands(
+          process.env.ClientID,
+          process.env.GuildID
+        ),
+        { body: commands }
+      );
+      console.log(`Registered Guild Commands.`.green);
+    } catch (error) {
+      console.error(error);
+    }
+  })();
 
   require("./whitelist")(client);
+  require("./ai")(client);
+  require("./namechange")(client);
+  require("./ticket")(client);
+  setInterval(() => {
+    uploadDBToTelegram();
+  }, 5 * 60 * 1000); // 5 minutes
 });
-
 
 client.login(process.env.TOKEN);

@@ -8,10 +8,6 @@ const commands = [
     description: "This command will send a message to the dedicated channel",
   },
   {
-    name: "setupticket",
-    description: "This command will send the initial ticket button to the channel",
-  },
-  {
     name: "acceptwl",
     description:
       "This will give whitelist role to mentioned user and automatically send whitelist message to channel",

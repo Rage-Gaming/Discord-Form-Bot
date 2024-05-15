@@ -4,7 +4,7 @@ This is a discord form bot the server members can fill the form and can submit t
 
 You need to rename the `example.env.txt` to `.env`
 
-You need to import your discord bot token to the .env and add needed items
+You need to import your discord bot token to the `.env` and add needed items
 
 After getting to the admin, admins can react from their for example they can accept or reject from their and the reaction will go to the mentioned channel and to the user DM
 

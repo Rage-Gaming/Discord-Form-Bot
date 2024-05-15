@@ -33,3 +33,6 @@ To stop your application:
 To monitor logs:
     pm2 logs my-app
 
+To setup
+    Use /setup for the intitial setup
+

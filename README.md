@@ -25,13 +25,12 @@ To view the list of running processes:
     pm2 list
 
 To restart your application:
-    pm2 restart my-app
+    pm2 restart  bot
 
 To stop your application:
-    pm2 stop my-app
-
+    pm2 stop bot
 To monitor logs:
-    pm2 logs my-app
+    pm2 logs bot
 
 To setup
     Use /setup for the intitial setup

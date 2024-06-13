@@ -1,12 +1,12 @@
 # Discord-Form-Bot
 
-This is a discord form bot the server members can fill the form and can submit to the admins
+This is a Discord form bot. Server members can fill out the form and submit it to the admins.
 
-You need to rename the `example.env.txt` to `.env`
+You need to rename `example.env.txt` to `.env`.
 
-You need to import your discord bot token to the `.env` and add needed items
+You need to import your Discord bot token into the `.env` file and add the necessary items.
 
-After getting to the admin, admins can react from their for example they can accept or reject from their and the reaction will go to the mentioned channel and to the user DM
+After reaching the admin, they can react from there. For example, they can accept or reject the request, and the reaction will be sent to the mentioned channel and the user's DM.
 
 Some previews:
 
@@ -37,4 +37,4 @@ To setup
 
 
 
-if you have any doubt of this bot you can contact me via discord `chaos_rage`
+If you have any doubts about this bot, you can contact me via Discord. `chaos_rage`

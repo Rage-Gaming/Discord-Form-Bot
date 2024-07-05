@@ -11,31 +11,81 @@ This is a Discord form bot that allows server members to fill out forms and subm
 
 ### Installation
 
-1. **Clone the repository**:
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
+1. **Clone the repository**: Clone the repository to your local machine and navigate to the repository directory.
 
-2. **Rename the example environment file**:
-    ```bash
-    mv example.env.txt .env
-    ```
+2. **Rename the example environment file**: Rename `example.env.txt` to `.env`.
 
 3. **Add your Discord bot token and other necessary items to the `.env` file**:
-    ```env
-    DISCORD_TOKEN=your_discord_bot_token
-    ADMIN_CHANNEL_ID=your_admin_channel_id
-    GUILD_ID=your_guild_id
+    ```
+    TOKEN = your_discord_bot_token
+    ClientID = your_admin_channel_id
+    GuildID =your_guild_id
     ```
 
-4. **Install the dependencies**:
-    ```bash
-    npm install
-    ```
+4. **Install the dependencies**: Run `npm install` to install the necessary dependencies.
 
 ### Starting the Bot
 
 To start the bot, run the following command:
 ```bash
 node start.js
+```
+## Managing the Bot with PM2
+- View the list of running processes:
+     ```bash 
+    pm2 list
+    ```
+
+- Restart your application:
+    ```bash
+    pm2 restart bot
+    ```
+
+- Stop your application:
+    ```bash
+    pm2 stop bot
+    ```
+
+- Monitor logs:
+    ```bash
+    pm2 logs bot
+    ```
+
+## Initial Setup
+
+Use the /setup command for the initial setup.
+
+## Usage
+Once the bot is running, server members can fill out forms and submit them to the admins. Admins can then react to the submissions from their end. Accepted or rejected requests will be communicated to the mentioned channel and the user's DM.
+
+## Commands
+
+- **/setup**: Initializes the bot setup.
+- **/acceptwl [user]**: Admin command to accept a form submission.
+
+## Screenshots
+
+<img src = "images/Screenshot_20230406-113644_Discord.png">
+
+<img src = "images/Screenshot_20230406-113719_Discord.png">
+
+<img src = "images/image.png">
+
+## Troubleshooting
+
+- **Bot not starting:**
+    - Ensure you have renamed `example.env.txt` to `.env`.
+    - Check if the Discord bot token is correctly added in the `.env` file.
+    - Ensure all dependencies are installed by running `npm install`.
+
+- **Commands not working:**
+    - Check if the bot has the necessary permissions.
+    - Ensure the bot is running and connected to the correct server.
+
+- **Support**
+
+    If you have any questions or need help, feel free to contact me on Discord: `chaos_rage`.
+
+- **License**
+
+    This project is licensed under the MIT License. See the LICENSE file for details.

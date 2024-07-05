@@ -2,10 +2,9 @@ require("dotenv").config();
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v10");
 const { Client, GatewayIntentBits } = require("discord.js");
-const { updatePlayerCount } = require("./status");
 const commands = require("./commands");
 require('colors');
-
+const { updatePlayerCount } = require("./status");
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -15,11 +14,12 @@ const client = new Client({
     GatewayIntentBits.DirectMessages,
   ],
 });
-
 client.on("ready", async () => {
   console.clear();
   console.log(`Bot ${client.user.tag} is now online`.green);
-  updatePlayerCount(client, process.env.SecondsToUpdateStatus);
+  if (process.env.STATUS == "true") {
+    updatePlayerCount(client, process.env.SecondsToUpdateStatus);
+  }
   const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
   (async () => {

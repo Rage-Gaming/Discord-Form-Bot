@@ -1,7 +1,7 @@
 {
   "name": "discord-bot",
   "version": "1.0.0",
-  "description": "This is simple application bot",
+  "description": "This is simple discord form bot that used to interact with your members. Created by Rage. If you have any doubt you can contact me in discord chaos_rage",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

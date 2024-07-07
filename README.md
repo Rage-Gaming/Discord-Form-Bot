@@ -88,4 +88,4 @@ Once the bot is running, server members can fill out forms and submit them to th
 
 - **License**
 
-    This project is licensed under the MIT License. See the [LICENCE](https://github.com/Rage-Gaming/Discord-Form-Bot/blob/main/LICENCE.md). file for details.
+    This project is licensed under the LGPL License. See the [LICENCE](https://github.com/Rage-Gaming/Discord-Form-Bot/blob/main/LICENCE.md). file for details.

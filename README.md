@@ -84,7 +84,7 @@ Once the bot is running, server members can fill out forms and submit them to th
 
 - **Support**
 
-    If you have any questions or need help, feel free to contact me on Discord: `chaos_rage`.
+    If you have any questions or need help, feel free to contact me on Discord: [Join Now](https://discord.gg/bDaYd2P9Vu).
 
 - **License**
 

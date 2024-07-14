@@ -86,6 +86,6 @@ Once the bot is running, server members can fill out forms and submit them to th
 
     If you have any questions or need help, feel free to contact me on Discord: [Join Now](https://discord.gg/bDaYd2P9Vu).
 
-- **License**
+## License
 
-    This project is licensed under the LGPL License. See the [LICENCE](https://github.com/Rage-Gaming/Discord-Form-Bot/blob/main/LICENCE.md). file for details.
+This project is licensed under the LGPL License. See the [LICENCE](https://github.com/Rage-Gaming/Discord-Form-Bot/blob/main/LICENCE.md). file for details.

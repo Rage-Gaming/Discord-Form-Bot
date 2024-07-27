@@ -74,7 +74,7 @@ Once the bot is running, server members can fill out forms and submit them to th
 ## Troubleshooting
 
 - **Bot not starting:**
-    - Ensure you have renamed `example.env.txt` to `.env`.
+    - Ensure you have renamed `example.env` to `.env`.
     - Check if the Discord bot token is correctly added in the `.env` file.
     - Ensure all dependencies are installed by running `npm install`.
 

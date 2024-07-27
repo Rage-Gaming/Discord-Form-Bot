@@ -13,7 +13,7 @@ This is a Discord form bot that allows server members to fill out forms and subm
 
 1. **Clone the repository**: Clone the repository to your local machine and navigate to the repository directory.
 
-2. **Rename the example environment file**: Rename `example.env.txt` to `.env`.
+2. **Rename the example environment file**: Rename `example.env` to `.env`.
 
 3. **Add your Discord bot token and other necessary items to the `.env` file**:
     ```
@@ -65,11 +65,11 @@ Once the bot is running, server members can fill out forms and submit them to th
 
 ## Screenshots
 
-<img src = "images/Screenshot_20230406-113644_Discord.png">
+<img src = ".github/images/Screenshot_20230406-113644_Discord.png">
 
-<img src = "images/Screenshot_20230406-113719_Discord.png">
+<img src = ".github/images/Screenshot_20230406-113719_Discord.png">
 
-<img src = "images/image.png">
+<img src = ".github/images/image.png">
 
 ## Troubleshooting
 

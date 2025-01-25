@@ -1,3 +1,6 @@
+const path = require('path');
+const fs = require('fs');
+
 const loadCommands = (dir) => {
     const globalCommands = [];
     const guildCommands = [];

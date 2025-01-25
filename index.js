@@ -5,7 +5,6 @@ const fs = require('fs');
 require('colors');
 
 console.clear();
-
 console.log("Do enable the intents in the Discord Developer Portal.".yellow);
 
 const client = new Client({

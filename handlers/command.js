@@ -9,7 +9,7 @@ module.exports = {
 
         try {
             const admin = interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)
-            if (!admin) {
+            if (command.admin && !admin) {
                 await interaction.reply({ content: `This command is only available to administrators.`, flags: MessageFlags.Ephemeral });
                 return;
             }

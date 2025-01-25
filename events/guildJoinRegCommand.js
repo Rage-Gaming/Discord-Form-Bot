@@ -1,9 +1,9 @@
 const { Routes, ActivityType } = require('discord-api-types/v10');
+const loadCommands = require('../utils/loadCommands');
 const { REST } = require('@discordjs/rest');
 const config = require('../config/config');
 const { Events } = require('discord.js');
 const path = require('path');
-const loadCommands = require('../utils/loadCommands');
 require('colors');
 
 module.exports = {

@@ -25,7 +25,7 @@ module.exports = {
             for (const guild of guilds.values()) {
                 try {
                     await rest.put(Routes.applicationGuildCommands(config.client.id, guild.id), { body: guildCommands });
-                    console.log(`Registered guild (/) commands for guild ${guild.name} ✔`.green);
+                    console.log(`Registered guild: ${guild.name} ✔`.green);
                 } catch (error) {
                     console.error(`Error registering commands for guild ${guild.name}:`.red, error);
                 }
@@ -34,5 +34,10 @@ module.exports = {
         } catch (error) {
             console.error('Error registering commands:', error.message.red);
         }
+
+        // client.user.setPresence({
+        //     status: "online",
+        //     activities: [{ name: config.activityMessage, type: ActivityType.Custom }]
+        // });
     },
 };

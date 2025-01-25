@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const loadCommands = (dir) => {
+const loadCommands = (dir, client) => {
     const globalCommands = [];
     const guildCommands = [];
     const files = fs.readdirSync(dir);

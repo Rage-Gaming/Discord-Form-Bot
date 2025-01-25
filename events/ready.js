@@ -10,12 +10,13 @@ module.exports = {
     name: Events.ClientReady,
     once: true,
     async execute(client) {
+        console.clear();
         console.log(`Logged in as ${client.user.username}`.yellow);
         console.log('Refreshing slash (/) commands'.blue);
         const rest = new REST({ version: '10' }).setToken(config.token);
 
         const commandsPath = path.join(__dirname, '../commands');
-        const { globalCommands, guildCommands } = loadCommands(commandsPath);
+        const { globalCommands, guildCommands } = loadCommands(commandsPath, client);
 
         try {
             await rest.put(Routes.applicationCommands(config.client.id), { body: globalCommands });

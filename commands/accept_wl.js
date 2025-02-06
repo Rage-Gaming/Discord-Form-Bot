@@ -28,7 +28,7 @@ module.exports = {
             .addFields([
                 {
                     name: '\n\u200b\nServer Name ',
-                    value: `\`\`\`DHRUVAM\`\`\``,
+                    value: `\`\`\`${interaction.guild.name}\`\`\``,
                     inline: false
                 },
                 {
@@ -51,8 +51,8 @@ module.exports = {
         }
 
         try {
-            await accept_msg_channel.send({ content: userMention(user.id) + ' ' + config.messages.success, embeds: [acceptEmbed] });
-            await user.send({ content: userMention(user.id) + ' ' + config.messages.success, embeds: [acceptEmbed] });
+            await accept_msg_channel.send({ content: userMention(user.id) + ' ' + config.whitelist.messages.success, embeds: [acceptEmbed] });
+            await user.send({ content: userMention(user.id) + ' ' + config.whitelist.messages.success, embeds: [acceptEmbed] });
             return interaction.editReply({ content: `${userMention(user.id)} has been successfully whitelisted.` });
         } catch (error) {
             if (error.code === 50007) {

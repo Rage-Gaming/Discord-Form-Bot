@@ -1,4 +1,5 @@
-const { Routes, ActivityType } = require('discord-api-types/v10');
+const { Routes } = require('discord-api-types/v10');
+const setActivity = require('../utils/setActivity');
 const loadCommands = require('../utils/loadCommands');
 const { REST } = require('@discordjs/rest');
 const config = require('../config/config');
@@ -35,9 +36,13 @@ module.exports = {
             console.error('Error registering commands:', error.message.red);
         }
 
-        // client.user.setPresence({
-        //     status: "online",
-        //     activities: [{ name: config.activityMessage, type: ActivityType.Custom }]
-        // });
+        if((config.activity.discord.enabled && config.activity.fivem.enabled) || config.activity.fivem.enabled) {
+            setActivity.updatePlayerCount(client, config.activity.fivem.interval);
+        } else {
+            client.user.setPresence({
+                status: config.activity.discord.status,
+                activities: [{ name: config.activity.discord.text, type: config.activity.discord.type }]
+            });
+        }
     },
 };

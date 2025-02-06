@@ -1,5 +1,5 @@
 {
-  "name": "discord-bot",
+  "name": "discord-form-bot",
   "version": "1.0.0",
   "description": "This is simple discord form bot that used to interact with your members. Created by Rage. If you have any doubt you can contact me in discord chaos_rage",
   "main": "index.js",
@@ -7,7 +7,9 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "Rage",
+  "authors": [
+    "Rage", "iPuppyYT"
+  ],
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.9",
